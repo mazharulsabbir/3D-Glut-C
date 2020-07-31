@@ -1,5 +1,5 @@
 # depslib dependency file v1.0
-1596124764 source:d:\projects\glutprojects\3d_implementation_exapmle\main.cpp
+1596201995 source:d:\projects\glutprojects\3d_implementation_exapmle\main.cpp
 	<iostream>
 	<stdlib.h>
 	<windows.h>

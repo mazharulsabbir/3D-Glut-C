@@ -75,9 +75,25 @@ void drawScene() {
 	glNormal3f(0.0f, 0.0f, 1.0f);
 
 	glVertex3f(-1.5f, -1.0f, 1.5f); // x1,y1,z1
-	glVertex3f(1.5f, -1.0f, 1.5f); // x2,y2,z2
-	glVertex3f(1.5f, 1.0f, 1.5f); // x3,y3,z3
+	glVertex3f(0.7f, -1.0f, 1.5f); // x2,y2,z2
+	glVertex3f(0.7f, 1.0f, 1.5f); // x3,y3,z3
 	glVertex3f(-1.5f, 1.0f, 1.5f); // x4, y4, z4
+
+	glVertex3f(0.7f, 1.0f, 1.5f); // x1,y1,z1
+	glVertex3f(1.5f, 1.0f, 1.5f); // x2,y2,z2
+	glVertex3f(1.5f, 0.7f, 1.5f); // x3,y3,z3
+	glVertex3f(0.7f, 0.7f, 1.5f); // x4, y4, z4
+
+	//front door
+	glColor3f(1.0f, 1.0f, 0.0f);
+	glBegin(GL_QUADS);
+
+	glNormal3f(0.0f, 0.0f, 1.0f);
+
+	glVertex3f(0.7f, -1.0f, 1.2f); // x1,y1,z1
+	glVertex3f(1.5f, -1.0f, 1.5f); // x2,y2,z2
+	glVertex3f(1.5f, 0.7f, 1.5f); // x3,y3,z3
+	glVertex3f(0.7f, 0.7f, 1.2f); // x4, y4, z4
 
 	//Right part
 	glColor3f(0.0f, 1.0f, 0.0f);
@@ -101,10 +117,30 @@ void drawScene() {
 
 	glNormal3f(0.0f, 0.0f, -1.0f);
 
-	glVertex3f(-1.5f, -1.0f, -1.5f);
-	glVertex3f(1.5f, -1.0f, -1.5f);
+	glVertex3f(-0.7f, -1.0f, -1.5f);
+	glVertex3f(0.7f, -1.0f, -1.5f);
+	glVertex3f(0.7f, 1.0f, -1.5f);
+	glVertex3f(-0.7f, 1.0f, -1.5f);
+
+	glVertex3f(-1.5f, 0.5f, -1.5f);
+	glVertex3f(1.5f, 0.5f, -1.5f);
 	glVertex3f(1.5f, 1.0f, -1.5f);
 	glVertex3f(-1.5f, 1.0f, -1.5f);
+
+	glVertex3f(-1.5f, -0.5f, -1.5f);
+	glVertex3f(1.5f, -0.5f, -1.5f);
+	glVertex3f(1.5f, -1.0f, -1.5f);
+	glVertex3f(-1.5f, -1.0f, -1.5f);
+
+	glVertex3f(-1.5f, -1.0f, -1.5f);
+	glVertex3f(-1.3f, -1.0f, -1.5f);
+	glVertex3f(-1.3f, 1.0f, -1.5f);
+	glVertex3f(-1.5f, 1.0f, -1.5f);
+
+	glVertex3f(1.5f, -1.0f, -1.5f);
+	glVertex3f(1.3f, -1.0f, -1.5f);
+	glVertex3f(1.3f, 1.0f, -1.5f);
+	glVertex3f(1.5f, 1.0f, -1.5f);
 
 	//Left
 	glColor3f(1.0f, 0.0f, 1.0f);
@@ -136,13 +172,43 @@ void drawScene() {
 	glVertex3f(-1.8f, 2.0f, -0.0f);
 	// top ends here
 
+    //front cimni
+	glColor3f(1.0f, 0.0f, 0.0f);
+	glBegin(GL_QUADS);
+
+	glNormal3f(0.0f, 0.0f, 1.0f);
+
+	glVertex3f(-1.3f, -1.0f, 1.0f); // x1,y1,z1
+	glVertex3f(-1.0f, -1.0f, 1.0f); // x2,y2,z2
+	glVertex3f(-1.0f, 1.7f, 1.0f); // x3,y3,z3
+	glVertex3f(-1.3f, 1.7f, 1.0f); // x4, y4, z4
+
+	//Left
+	glColor3f(1.0f, 0.0f, 0.0f);
+	glBegin(GL_QUADS);
+	glNormal3f(-1.0f, 0.0f, 0.0f);
+	glVertex3f(-1.3f, 1.0f, -0.1f);// x1,y1,z1
+	glVertex3f(-1.3f, 1.0f, 1.0f);// x2,y2,z2
+	glVertex3f(-1.3f, 1.7f, 1.0f); // x3,y3,z3
+	glVertex3f(-1.3f, 1.7f, -0.1f);// x4, y4, z4
+
+	//Right part
+	glColor3f(1.0f, 0.0f, 0.0f);
+	glBegin(GL_QUADS);
+	glNormal3f(1.0f, 0.0f, 0.0f);
+
+	glVertex3f(-1.0f, 1.0f, -0.1f);// x1,y1,z1
+	glVertex3f(-1.0f, 1.0f, 1.0f);// x2,y2,z2
+	glVertex3f(-1.0f, 1.7f, 1.0f); // x3,y3,z3
+	glVertex3f(-1.0f, 1.7f, -0.1f);// x4, y4, z4
+
 	glEnd();
 
 	glutSwapBuffers();
 }
 
 void update(int value) {
-	_angle += 2.5f;
+	_angle += 0.5f;
 	if (_angle > 360) {
 		_angle -= 360;
 	}
